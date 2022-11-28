@@ -38,6 +38,7 @@ If you are using this inside a container, a POSIX-compliant `tar` needs to be in
 
 #### Environment Variables
 * `SEGMENT_DOWNLOAD_TIMEOUT_MINS` - Segment download timeout (in minutes, default `60`) to abort download of the segment if not completed in the defined number of minutes. [Read more](https://github.com/actions/cache/blob/main/workarounds.md#cache-segment-restore-timeout)
+* `CACHE_SKIP_SAVE` - [optional] When set to `true`, any modifications made to the restored cache will not be persisted back at the end of the step. This environment variable can be set at any time using `echo "CACHE_SKIP_SAVE=true" >> $GITHUB_ENV`
 
 ### Outputs
 
